@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: auth-server-db
+    environment:
+      POSTGRES_USER: courtroom
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: courtroom
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
