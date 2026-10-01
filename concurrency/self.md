@@ -10,3 +10,7 @@ coroutinr object -> awaitable that gets returned when we call the co routine fuc
 when we write a await with coroutine object it is both run it to completion and schedule to event loop at the same time
 tasks -> wrapped co routine that can be run independently
 task can be schedule on the event loop and just sit there untill the loop gets control which haleps us queuing the task
+
+I/O bound are the tasks where we are just waiting for external things to be done like http req, db calls,file access
+
+Video Link : https://www.youtube.com/watch?v=oAkLSJNr5zY
